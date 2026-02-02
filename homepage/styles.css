@@ -1,0 +1,29 @@
+/* Selector 1: Element Selector */
+body {
+    background-color: #f0f8ff;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Selector 2: Class Selector */
+.navbar-brand {
+    font-weight: bold; /* Property 3 */
+    color: #ffd700 !important; /* Gold color for the logo */
+}
+
+/* Selector 3: ID Selector */
+#navbarNav {
+    justify-content: flex-end; /* Property 4: Align menu to right */
+}
+
+/* Selector 4: Descendant Selector */
+h1, h2 {
+    color: #2c3e50;
+    text-align: center; /* Property 5 */
+    margin-bottom: 20px;
+}
+
+/* Selector 5: Class selector for cards */
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}

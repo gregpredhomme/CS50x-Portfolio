@@ -1,0 +1,23 @@
+Specification for My Homepage
+
+HTML Tags Used:
+1. <nav> - For the navigation bar
+2. <div> - For grouping content and grid system
+3. <ul> - For the unordered list in the navbar
+4. <li> - For list items in the navbar
+5. <a> - For hyperlinks between pages
+6. <button> - For the mobile menu toggler and contact form button
+7. <span> - For the toggler icon
+8. <input> - For the email field in contact form
+9. <textarea> - For the message body in contact form
+10. <label> - For form labels
+
+CSS Properties Used:
+1. background-color - To set the page background
+2. font-family - To change the text font
+3. font-weight - To make the brand logo bold
+4. justify-content - To align the navbar items
+5. text-align - To center the headers
+
+JavaScript/Bootstrap Summary:
+I used the Bootstrap Navbar component to create a responsive menu that collapses on mobile devices, and I used a simple JavaScript alert on the Contact page button to simulate sending a message.

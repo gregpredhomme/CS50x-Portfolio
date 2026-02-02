@@ -1,0 +1,11 @@
+sort1 uses: bubble sort
+
+How do you know?: it is by far the slowest when sorting a random sorted list and not the slowest when sorting an already sorted list.
+
+sort2 uses: merge sort
+
+How do you know?: it is the fastest for all of the data types because it is the most efficient sorting method
+
+sort3 uses: selection sort
+
+How do you know?: it is twice as fast as bubble sort for a random sorted list.

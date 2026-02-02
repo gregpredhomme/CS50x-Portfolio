@@ -1,0 +1,2 @@
+The audio aura is highest in danceability and energy, and it is lowest in valence.
+I hypothesize this aura might not be representative of the listener. Instead of the top 100 songs, I propose looking minutes listened and mapping those minutes listened to energy, danceability, and valence.
