@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block main %}
+    <h1>History: {{ habit_name }}</h1>
+    {% if description %}
+        <p style="color:gray;">{{ description }}</p>
+    {% endif %}
+
+    <div style="background-color:#f9f9f9; padding:15px; border-radius:8px; margin-bottom:20px;">
+        <p><strong>Current Streak:</strong> {{ current_streak }} days</p>
+        <p><strong>All-time Record:</strong> {{ longest_streak }} days</p>
+        <p><strong>Total Completions:</strong> {{ total_done }}</p>
+    </div>
+
+    <h3>Completion Log</h3>
+    {% if dates|length == 0 %}
+        <p>No completions yet.</p>
+    {% else %}
+        <ul>
+        {% for d in dates %}
+            <li>{{ d }}</li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+
+    <p style="margin-top:20px;"><a href="/">&larr; Back to Dashboard</a></p>
+{% endblock %}

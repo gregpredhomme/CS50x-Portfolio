@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Habit Tracker</title>
+    <style>
+        body { font-family: sans-serif; margin: 20px; max-width: 800px; margin: 0 auto; padding: 20px; }
+        nav { margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid #ccc; }
+        nav a { margin-right: 15px; text-decoration: none; font-weight: bold; color: #333; }
+        table { border-collapse: collapse; width: 100%; margin-top: 20px; }
+        table, th, td { border: 1px solid #ddd; }
+        th, td { padding: 12px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        .done { color: green; font-weight: bold; }
+        .not-done { color: #007BFF; cursor: pointer; text-decoration: none; }
+        .error { color: red; background: #ffe6e6; padding: 10px; border-radius: 5px; }
+        button { padding: 10px 15px; cursor: pointer; background-color: #007BFF; color: white; border: none; border-radius: 4px;}
+        input[type="text"] { padding: 8px; width: 100%; max-width: 300px; margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/">My Habits</a>
+        <a href="/add">+ Add New Habit</a>
+    </nav>
+
+    {% block main %}{% endblock %}
+</body>
+</html>

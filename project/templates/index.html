@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block main %}
+    <h1>My Daily Habits</h1>
+
+    {% if habits|length == 0 %}
+        <p>You haven't tracked any habits yet. Click "Add New Habit" to get started.</p>
+    {% else %}
+        <table>
+            <tr>
+                <th>Habit Name</th>
+                <th>Current Streak</th>
+                <th>Best Streak</th>
+                <th>Today's Status</th>
+                <th>Actions</th>
+            </tr>
+            {% for habit in habits %}
+            <tr>
+                <td>
+                    <a href="/habit/{{ habit.id }}">{{ habit.name }}</a>
+                    {% if habit.description %}
+                    <br><small style="color:gray">{{ habit.description }}</small>
+                    {% endif %}
+                </td>
+                <td>{{ habit.current_streak }} days</td>
+                <td>{{ habit.longest_streak }} days</td>
+                <td>
+                    {% if habit.done_today %}
+                        <span class="done">✓ Completed</span>
+                    {% else %}
+                        <a href="/done/{{ habit.id }}" class="not-done">Mark as Done</a>
+                    {% endif %}
+                </td>
+                <td>
+                    <a href="/delete/{{ habit.id }}" style="color:red; text-decoration:none;" onclick="return confirm('Delete this habit permanently?');">✕ Delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    {% endif %}
+{% endblock %}

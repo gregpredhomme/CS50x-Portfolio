@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block main %}
+    <h1>Track a New Daily Habit</h1>
+
+    <form action="/add" method="post">
+        {% if error %}
+        <div class="error">{{ error }}</div>
+        <br>
+        {% endif %}
+
+        <p>
+            <label for="name"><strong>Habit Name</strong> (e.g., "Drink Water"):</label><br>
+            <input type="text" name="name" id="name" required placeholder="Enter habit name...">
+        </p>
+
+        <p>
+            <label for="desc"><strong>Description</strong> (Optional):</label><br>
+            <input type="text" name="description" id="desc" placeholder="Details...">
+        </p>
+
+        <button type="submit">Start Tracking</button>
+    </form>
+{% endblock %}
+
